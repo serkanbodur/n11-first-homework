@@ -19,11 +19,15 @@
         <property name="show_sql">true</property>
 
         <!-- Update database on startup -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Annotated entity classes -->
-        <mapping class="entity.Kategori"/>
-        <mapping class="entity.Urun"/>
+        <mapping class="entity.Category"/>
+        <mapping class="entity.Product"/>
+        <mapping class="entity.User"/>
+        <mapping class="entity.ProductComment"/>
+
+
 
     </session-factory>
 </hibernate-configuration>

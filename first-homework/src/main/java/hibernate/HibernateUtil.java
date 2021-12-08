@@ -18,7 +18,7 @@ public class HibernateUtil {
             return sessionFactory;
 
         } catch (Exception e){
-            System.out.println("Session factory oluşturulurken hata oluştu" + e);
+            System.out.println("While creating session factory,an error occured" + e);
             throw new ExceptionInInitializerError(e);
         }
 

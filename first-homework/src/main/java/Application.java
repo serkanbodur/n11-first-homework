@@ -1,15 +1,15 @@
-import entity.Kategori;
-import entityservice.KategoriEntityService;
+import entity.Category;
+import entityservice.CategoryEntityService;
 
 import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        KategoriEntityService service = new KategoriEntityService();
-        List<Kategori> kategoriList = service.findAll();
+        CategoryEntityService service = new CategoryEntityService();
+        List<Category> categoryList = service.findAll();
 
-        for (Kategori kategori : kategoriList) {
-            System.out.println(kategori.getAdi());
+        for (Category category : categoryList) {
+            System.out.println(category.getName());
         }
     }
 }
