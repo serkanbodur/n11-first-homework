@@ -104,12 +104,12 @@ public class UrunYorumDto {
                 "urunAdi='" + urunAdi + '\'' +
                 ", kategoriAdi='" + kategoriAdi + '\'' +
                 ", urunFiyati=" + urunFiyati + '\'' +
-                ", urunFiyati=" + kullaniciAdi + '\'' +
-                ", urunFiyati=" + kullaniciSoyadi + '\'' +
-                ", urunFiyati=" + kullaniciEmail + '\'' +
-                ", urunFiyati=" + kullaniciTelefon + '\'' +
-                ", urunFiyati=" + yorum + '\'' +
-                ", urunFiyati=" + yorumTarihi +
+                ", kullaniciAdi=" + kullaniciAdi + '\'' +
+                ", kullaniciSoyadi=" + kullaniciSoyadi + '\'' +
+                ", kullaniciEmail=" + kullaniciEmail + '\'' +
+                ", kullaniciTelefon=" + kullaniciTelefon + '\'' +
+                ", yorum=" + yorum + '\'' +
+                ", yorumTarihi=" + yorumTarihi +
                 '}';
     }
 }
