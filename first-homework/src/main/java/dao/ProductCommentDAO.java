@@ -1,6 +1,7 @@
 package dao;
 
 import base.BaseDao;
+import dto.ProductCommentCountDTO;
 import dto.ProductCommentDTO;
 import org.hibernate.query.Query;
 
@@ -19,6 +20,19 @@ public class ProductCommentDAO extends BaseDao {
 
         Query query = getCurrentSession().createQuery(sql);
         query.setParameter("id", id);
+
+        return query.list();
+    }
+
+    public List<ProductCommentCountDTO> findAllNumberOfProductComment ()
+    {
+        String sql = " select " +
+                " new dto.ProductCommentCountDTO( product.id, product.name, product.price, count(distinct product_comment.product.id)) " +
+                " from ProductComment product_comment " +
+                " left join Product product  on product_comment.product.id = product.id " +
+                " where product.id = :id ";
+
+        Query query = getCurrentSession().createQuery(sql);
 
         return query.list();
     }
