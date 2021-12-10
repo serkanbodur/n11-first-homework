@@ -70,4 +70,16 @@ public class ProductComment {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "ProductComment{" +
+                "id=" + id +
+                ", comment='" + comment + '\'' +
+                ", commentDate=" + commentDate +
+                ", product=" + product +
+                ", user=" + user +
+                '}';
+    }
+
 }

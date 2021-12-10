@@ -5,7 +5,7 @@ import entityservice.ProductCommentEntityService;
 
 import java.util.List;
 
-public class FindAllProductCommentApp {
+public class FindAllProductCommentDTOApp {
     public static void main(String[] args) {
         ProductCommentEntityService service = new ProductCommentEntityService();
         List<ProductCommentDTO> productCommentDTOList = service.findAllProductCommentDTO(2L);

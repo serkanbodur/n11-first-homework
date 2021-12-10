@@ -3,6 +3,7 @@ package dao;
 import base.BaseDao;
 import dto.ProductCommentCountDTO;
 import dto.ProductCommentDTO;
+import dto.ProductUserCommentDTO;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -33,6 +34,21 @@ public class ProductCommentDAO extends BaseDao {
                 " group by product.id ";
 
         Query query = getCurrentSession().createQuery(sql);
+
+        return query.list();
+    }
+
+    public List<ProductUserCommentDTO> findAllUserCommentDTOByUserId(Long id)
+    {
+        String sql = " select " +
+                " new dto.ProductUserCommentDTO( user.id, user.name, product.name, product_comment.comment, product_comment.commentDate) " +
+                " from ProductComment product_comment " +
+                " left join Product product  on product_comment.product.id = product.id " +
+                " left join User user on product_comment.user.id = user.id " +
+                " where user.id = :id ";
+
+        Query query = getCurrentSession().createQuery(sql);
+        query.setParameter("id", id);
 
         return query.list();
     }

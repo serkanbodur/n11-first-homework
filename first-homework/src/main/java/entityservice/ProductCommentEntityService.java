@@ -3,6 +3,7 @@ package entityservice;
 import dao.ProductCommentDAO;
 import dto.ProductCommentCountDTO;
 import dto.ProductCommentDTO;
+import dto.ProductUserCommentDTO;
 
 import java.util.List;
 
@@ -21,5 +22,10 @@ public class ProductCommentEntityService {
     public List<ProductCommentCountDTO> findAllNumberOfProductComment()
     {
         return productCommentDAO.findAllNumberOfProductComment();
+    }
+
+    public List<ProductUserCommentDTO> findAllUserCommentDTOByUserId(Long id)
+    {
+        return productCommentDAO.findAllUserCommentDTOByUserId(id);
     }
 }
