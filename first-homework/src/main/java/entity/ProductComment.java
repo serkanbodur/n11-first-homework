@@ -6,7 +6,7 @@ import java.util.Date;
 @Entity
 @Table(name = "PRODUCTCOMMENT")
 public class ProductComment {
-    @SequenceGenerator(name = "generator", sequenceName = "URUNYORUM_ID_SEQ")
+    @SequenceGenerator(name = "generator", sequenceName = "PRODUCTCOMMENT_ID_SEQ")
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID", nullable = false)
