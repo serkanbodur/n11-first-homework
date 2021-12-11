@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="first-homework" options="--add-modules java.base" />
+      <module name="first-homework" options="" />
     </option>
   </component>
 </project>
