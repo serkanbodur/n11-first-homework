@@ -28,10 +28,11 @@ public class ProductCommentDAO extends BaseDao {
     public List<ProductCommentCountDTO> findAllNumberOfProductComment ()
     {
         String sql = " select " +
-                " new dto.ProductCommentCountDTO( product.id, product.name, product.price, count( product_comment.product.id)) " +
+                " new dto.ProductCommentCountDTO( product.id, product.name, product.price, count ( product_comment.product.id ))" +
                 " from Product product " +
                 " left join ProductComment product_comment  on product.id = product_comment.product.id " +
-                " group by product.id ";
+                " group by product.id " +
+                " order by product.id ";
 
         Query query = getCurrentSession().createQuery(sql);
 
